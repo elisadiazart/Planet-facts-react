@@ -1,5 +1,11 @@
+import Header from "./components/header/Header"
+import { GlobalStyles } from "./styles/GlobalStyles";
+
 const App = () => {
-	return <h1>Núcleo de la aplicación</h1>;
+	return <>
+	<GlobalStyles/>
+	<Header/>
+	</>
 };
 
 export default App;
