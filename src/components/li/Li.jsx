@@ -1,12 +1,15 @@
-import { StyledLi, StyledCircle, StyledDiv } from "./styles"
 
-const Li = ({text}) => {
+import { StyledLi, StyledCircle, StyledDiv, StyledNavLink, StyledContainer  } from "./styles"
+
+const Li = ({text, path, color, handleClick}) => {
     return <StyledLi>
-        <StyledDiv>
+        <StyledNavLink to={path} color={color} onClick={()=> handleClick(false)}>
+            <StyledContainer>
             <StyledCircle></StyledCircle>
-            <a href="">{text}</a>
-        </StyledDiv>
-        <img src="/images/icon-chevron.svg" alt="" />
+            <StyledDiv>{text}</StyledDiv>
+            </StyledContainer>
+            <img src="/images/icon-chevron.svg" alt="" />
+        </StyledNavLink>
     </StyledLi>
 }
 

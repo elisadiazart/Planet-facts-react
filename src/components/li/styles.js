@@ -1,8 +1,9 @@
+import { NavLink } from "react-router-dom"
 import styled from "styled-components"
 import { COLORS } from "../../constants/colors"
 
 const StyledLi = styled.li`
-    padding: 1rem;
+    padding: 1.7rem 1rem;
     border-bottom: 1px solid ${COLORS.grey};
     font-weight: 600;
     font-family: 'League Spartan', sans-serif;
@@ -11,7 +12,7 @@ const StyledLi = styled.li`
     color: ${COLORS.grey};
     display: flex;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     justify-content: space-between;
 `
 
@@ -20,7 +21,7 @@ const StyledCircle = styled.div`
      height: 25px;
      background-color: ${COLORS.grey};
      border-radius: 50%;
-     margin-right: 1rem;
+     margin-right: 2rem;
 `
 
 const StyledDiv = styled.div`
@@ -28,4 +29,25 @@ const StyledDiv = styled.div`
     align-items: center;
 `
 
-export {StyledLi, StyledCircle, StyledDiv}
+const StyledNavLink  = styled(NavLink)`
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    &.active {
+        color: white;
+    }
+
+    &.active ${StyledCircle}{
+        background-color: ${({ color }) => color};;
+
+   
+    }
+`
+
+const StyledContainer = styled.div`
+    display: flex;
+`
+
+export {StyledLi, StyledCircle, StyledDiv, StyledNavLink, StyledContainer }

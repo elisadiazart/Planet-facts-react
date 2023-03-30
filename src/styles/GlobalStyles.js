@@ -27,6 +27,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Inter', sans-serif;
         background-color: ${COLORS.bgcolor};
         color: white;
+        overflow: hidden;
     }
 
     *{
