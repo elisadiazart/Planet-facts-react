@@ -22,14 +22,14 @@ const StyledLi= styled.li`
 `
 
 const StyledPlanetImage = styled.img`
-    width: 200px;
+    height: 150px;
     margin: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
 `
 
 const StyledPlanetContainer = styled.div`
-    margin: 4rem 1rem;
+    margin: 3rem .4rem;
 
 `
 
@@ -37,17 +37,17 @@ const StyledH1 = styled.h1`
     font-family: 'Antonio', sans-serif;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 `
 
 const StyledText = styled.p`
     font-family: 'League Spartan', sans-serif;
     margin: 0 2rem;
     text-align: center;
-    font-size: 1rem;
-    line-height: 29px;
+    font-size: .9rem;
+    line-height: 24px;
     font-weight: 300;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 `
 
 const StyledSource = styled.p`
@@ -65,4 +65,13 @@ const StyledSourceLink = styled.a`
     text-decoration: underline;
 `
 
-export{ StyledUl, StyledA, StyledLi, StyledPlanetImage, StyledPlanetContainer, StyledH1, StyledText, StyledSource, StyledSourceLink }
+const StyledDataContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+`
+
+
+
+export{ StyledUl, StyledA, StyledLi, StyledPlanetImage, StyledPlanetContainer, StyledH1, StyledText, StyledSource, StyledSourceLink, StyledDataContainer }
