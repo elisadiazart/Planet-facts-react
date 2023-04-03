@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { COLORS } from "../constants/colors";
 
+
 const StyledUl = styled.ul`
     display: flex;
     justify-content: space-between;
@@ -13,12 +14,14 @@ const StyledA = styled.a`
     font-family: 'League Spartan', sans-serif;
     letter-spacing: 1.92857px;
     text-align: center;
-    opacity: .5;
+    opacity: ${({isActive})=>isActive ? '1' : '.5'}
     
 `
 
 const StyledLi= styled.li`
     padding: 1.6rem 2rem;
+    background-color:  ${({isActive, color})=>isActive ? color : 'transparent'};
+    
 `
 
 const StyledPlanetImage = styled.img`

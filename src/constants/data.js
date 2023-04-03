@@ -1,6 +1,6 @@
 import { v4 } from "uuid";
 
-export const PLANETS=[
+export const PLANETS =[
     {
         id: v4(),
         name:'mercury',
@@ -68,7 +68,8 @@ export const INFO ={
         rotationTime: '58.6 days',
         revolutionTime: '87.97 days',
         radius: '2,439.7 km',
-        averageTemp: '430°c'
+        averageTemp: '430°c',
+        color: '#DEF4FC'
     },
     venus:{
         overview:{
@@ -86,7 +87,8 @@ export const INFO ={
         rotationTime: '243 days',
         revolutionTime: '224.7 days',
         radius: '6,051.8 km',
-        averageTemp: '471°c'
+        averageTemp: '471°c',
+        color: '#F7CC7F'
     },
     earth:{
         overview:{
@@ -104,7 +106,8 @@ export const INFO ={
         rotationTime: '0.99 days',
         revolutionTime: '365.26 days',
         radius: '6,371 km',
-        averageTemp: '16°c'
+        averageTemp: '16°c',
+        color: '#545BFE'
     },
     mars:{
         overview:{
@@ -122,7 +125,8 @@ export const INFO ={
         rotationTime: '1.03 days',
         revolutionTime: '1.88 days',
         radius: '3,389 km',
-        averageTemp: '-28°c'
+        averageTemp: '-28°c',
+        color: '#FF6A45'
     },
     jupiter:{
         overview:{
@@ -140,7 +144,8 @@ export const INFO ={
         rotationTime: '9.93 days',
         revolutionTime: '11.86 days',
         radius: '69,911 km',
-        averageTemp: '-108°c'
+        averageTemp: '-108°c',
+        color: '#ECAD7A'
     },
     saturn:{
         overview:{
@@ -158,7 +163,8 @@ export const INFO ={
         rotationTime: '10.8 days',
         revolutionTime: '29.46 days',
         radius: '58,232 km',
-        averageTemp: '-138°c'
+        averageTemp: '-138°c',
+        color: '#FCCB6B'
     },
     uranus:{
         overview:{
@@ -176,7 +182,8 @@ export const INFO ={
         rotationTime: '17.2 days',
         revolutionTime: '84 days',
         radius: '25,362 km',
-        averageTemp: '-195°c'
+        averageTemp: '-195°c',
+        color: '#65F0D5'
     },
     neptune:{
         overview:{
@@ -194,6 +201,7 @@ export const INFO ={
         rotationTime: '16.08 days',
         revolutionTime: '164.79 days',
         radius: '24,622 km',
-        averageTemp: '-201°c'
+        averageTemp: '-201°c',
+        color: '#497EFA'
     }
 }

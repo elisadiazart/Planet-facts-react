@@ -10,14 +10,14 @@ const PlanetPage = ({planet}) => {
     return <main>
         <nav>
             <StyledUl>
-                <StyledLi>
-                    <StyledA href="#" onClick={()=>setValue('overview')}> overview</StyledA>
+                <StyledLi isActive={tab==='overview'} color={INFO[planet].color}>
+                    <StyledA isActive={tab==='overview'} href="#" onClick={()=>setValue('overview')} > overview</StyledA>
                 </StyledLi>
-                <StyledLi>
-                    <StyledA href="#" onClick={()=>setValue('internal')}>Structure</StyledA>
+                <StyledLi isActive={tab==='internal'} color={INFO[planet].color}>
+                    <StyledA isActive={tab==='internal'} href="#" onClick={()=>setValue('internal')} >Structure</StyledA>
                 </StyledLi>
-                <StyledLi>
-                    <StyledA href="#" onClick={()=>setValue('surface')}> Surface</StyledA>
+                <StyledLi isActive={tab==='surface'} color={INFO[planet].color}>
+                    <StyledA isActive={tab==='surface'} href="#" onClick={()=>setValue('surface')} > Surface</StyledA>
                 </StyledLi>
             </StyledUl>
         </nav>
