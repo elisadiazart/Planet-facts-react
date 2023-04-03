@@ -1,28 +1,31 @@
 
 import Data from "../components/data-element/Data"
 import { INFO } from "../constants/data"
+import { useState } from "react"
 import { StyledUl, StyledA, StyledLi, StyledPlanetImage, StyledPlanetContainer, StyledH1, StyledText, StyledSource, StyledSourceLink, StyledDataContainer } from "./styles"
 
 const PlanetPage = ({planet}) => {
+    const [tab, setValue] = useState('overview') 
+
     return <main>
         <nav>
             <StyledUl>
                 <StyledLi>
-                    <StyledA href="#"> overview</StyledA>
+                    <StyledA href="#" onClick={()=>setValue('overview')}> overview</StyledA>
                 </StyledLi>
                 <StyledLi>
-                    <StyledA href="#">Structure</StyledA>
+                    <StyledA href="#" onClick={()=>setValue('internal')}>Structure</StyledA>
                 </StyledLi>
                 <StyledLi>
-                    <StyledA href="#"> Surface</StyledA>
+                    <StyledA href="#" onClick={()=>setValue('surface')}> Surface</StyledA>
                 </StyledLi>
             </StyledUl>
         </nav>
         <StyledPlanetContainer>
-            <StyledPlanetImage src={`/images/planet-${planet}.svg`} alt="" />
+            <StyledPlanetImage src={INFO[planet][tab].image} alt="" />
         </StyledPlanetContainer>
     <StyledH1>{planet}</StyledH1>
-    <StyledText>{INFO[planet].text}</StyledText>
+    <StyledText>{INFO[planet][tab].text}</StyledText>
     <StyledSource>Source: <StyledSourceLink href="">Wikipedia</StyledSourceLink></StyledSource>
     <StyledDataContainer>
         <Data title='ROTATION TIME' data={INFO[planet].rotationTime}/>
