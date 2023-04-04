@@ -1,7 +1,7 @@
 import { v4 } from "uuid"
 import { PLANETS } from "../../constants/data"
 import Li from "../li/Li"
-import { StyledH1, StyledDiv, StyledUl, StyledNav} from "./styles"
+import { StyledH1, StyledDiv, StyledUl, StyledNav, StyledIconMenu} from "./styles"
 import { useState } from 'react';
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
         <StyledNav>
             <StyledDiv>
                <StyledH1>The planets</StyledH1> 
-               <img src="/images/icon-hamburger.svg" alt="menu" onClick={() => setMenu(open, setOpen)} />
+               <StyledIconMenu src="/images/icon-hamburger.svg" alt="menu" onClick={() => setMenu(open, setOpen)} />
             </StyledDiv>
             <StyledUl translate= {open ? '0' : '100vw'}>
                 {PLANETS.map( planet => (

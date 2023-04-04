@@ -1,5 +1,5 @@
 
-import { StyledLi, StyledCircle, StyledDiv, StyledNavLink, StyledContainer  } from "./styles"
+import { StyledLi, StyledCircle, StyledDiv, StyledNavLink, StyledContainer,StyledArrow  } from "./styles"
 
 const Li = ({text, path, color, handleClick}) => {
     return <StyledLi>
@@ -8,7 +8,7 @@ const Li = ({text, path, color, handleClick}) => {
             <StyledCircle></StyledCircle>
             <StyledDiv>{text}</StyledDiv>
             </StyledContainer>
-            <img src="/images/icon-chevron.svg" alt="" />
+            <StyledArrow src="/images/icon-chevron.svg" alt="" />
         </StyledNavLink>
     </StyledLi>
 }
